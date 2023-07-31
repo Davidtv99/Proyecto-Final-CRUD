@@ -1,0 +1,397 @@
+/* esto es el css de la navbar */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    background-color: #fff59d;
+    /* background-size: cover;
+    background-position: center; */
+}
+
+.header{
+    background-color: #1b3039;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+.logo{
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.header .logo{
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+
+.header .nav-links li a:hover{
+    color: #ffbc0e;
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+/* carrusel */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container-slider
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+#slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+}
+#slider li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
+}
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: 2; 
+}
+#container-slider .arrowNext {
+    left: initial;
+    right: 50px !important;
+}
+.content_slider{
+    padding: 15px 30px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+}
+.content_slider div{
+    text-align: center;
+}
+.content_slider h2{
+    font-family: 'arial';
+    font-size: 30pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.content_slider p {
+    font-size: 15pt;
+    font-family: 'arial';
+    color: #FFF;
+    margin-bottom: 20px;
+}
+#slider li .content_slider{
+    background: rgba(0, 0, 0, 0.50);
+    padding: 10px 125px;
+}
+.content_slider{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnSlider{
+    color: #FFF;
+    font-size: 15pt;
+    font-family: 'arial';
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border: 1px solid #CCC;
+    background: rgba(13, 13, 13, 0.55);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .5s all;
+}
+.btnSlider:hover{
+    background: #111;
+    border: 1px solid #111;
+}
+.listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.listslider li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.item-select-slid {
+    background: #FFF  !important;
+}
+
+@media screen and (max-width: 460px){
+	.content_slider h2 {
+	    font-size: 15pt !important;
+	}
+	.content_slider p {
+	    font-size: 12pt !important;
+	}
+	#container-slider .arrowPrev, #container-slider .arrowNext{
+		font-size: 20pt;
+	}
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 400px;
+		min-height: 400px;
+	}
+	#slider li .content_slider{
+		padding: 10px 35px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	}
+
+}
+parte se la tienda 
+.father{
+    width: 100%;
+    height: 900px;
+    border: 1px solid black;
+}
+.container-cards{
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    display:flex;
+    justify-content: space-between;
+}
+.titu{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: 700;
+    background: #CCC;
+}
+.text{
+    margin-top: 10px;
+    font-size: 700;
+}
+.cardD{
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin-left: 160px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-image:linear-gradient(rgba(5,7,12,0.45 ),rgba(5,7,12,0.45)), 
+    url("https://cdn.aarp.net/content/dam/aarp/travel/trips/2022/09/1140-disneyland-esp.imgcache.rev.web.1000.575.jpg");
+    background-position: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cardC{
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    background-image: linear-gradient(rgba(5,7,12,0.45 ),rgba(5,7,12,0.45)),
+    url("https://cnnespanol.cnn.com/wp-content/uploads/2023/03/paris-francia.jpg?quality=100&strip=info");
+    background-position: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cardI{
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-right: 160px;
+    border-radius: 5px;
+    background-image:linear-gradient(rgba(5,7,12,0.45 ),rgba(5,7,12,0.45)), 
+    url("https://www.civitatis.com/blog/wp-content/uploads/2016/05/Estatua-de-la-Libertad.jpg");
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cardD2{
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin-left: 160px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-image:linear-gradient(rgba(5,7,12,0.45 ),rgba(5,7,12,0.45)), 
+    url("https://media.mybnbwebsite.com/11934/hawaii_plane.jpg");
+    background-position: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cardC2{
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    background-image: linear-gradient(rgba(5,7,12,0.45 ),rgba(5,7,12,0.45)),
+    url("https://d3qvqlc701gzhm.cloudfront.net/full/22bab5ad4b9aa1027ad00a84ea7493d2c0c5e666d43d3b9413e332bdbd3f1780.jpg");
+    background-position: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.cardI2{
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-right: 160px;
+    border-radius: 5px;
+    background-image:linear-gradient(rgba(5,7,12,0.45 ),rgba(5,7,12,0.45)), 
+    url("https://viajesytramites.com/wp-content/uploads/2022/02/Jamaica-.jpg");
+    background-position: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.imagen{
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+}
+.card .lugar{
+    text-align: center;
+    margin-top: 10px;
+}
+.precio{
+    margin-top: 290px;
+    font-size: xx-large;
+    color: white;
+    margin-left: 160px;
+}
+.lugar{
+    color: white;
+    font-size: xx-large;
+    margin: 10px;
+}
+.boton{
+    background: linear-gradient(rgba(5,7,12,0.75 ),rgba(5,7,12,0.75));
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    margin-left: 180px;
+}
